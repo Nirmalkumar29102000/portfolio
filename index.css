@@ -1,0 +1,796 @@
+*{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        body{
+            width: 100%;
+            height: auto;
+            background: linear-gradient(30deg,#070929,rgb(2, 0, 0),#070929);
+            color: rgb(0, 0, 0);
+        }
+        p{
+            font-family:cursive;
+        }
+        header{
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: radial-gradient(rgb(125, 9, 179),rgb(0, 0, 0));
+        }
+        header h1{
+            background: linear-gradient( 30deg,#ff7300,rgb(70, 49, 49),rgb(255, 1, 1),rgb(255, 123, 0));
+            width: 340px;
+            padding: 0px 0px 0px 12px;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+            color: #ffffff;
+        }
+        header > nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            font-size: 2rem;
+            padding: 0px 20px 0px 20px;
+
+            color: rgb(255, 255, 255);
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            position: sticky;
+        }
+        header > nav > div{
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 1.3rem;
+            
+        }
+        header > nav > div h4:hover{
+            color: rgb(0, 255, 0);
+            
+        }
+        header > nav > button,.anchor1{
+            width: 200px;
+            height:50px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            background: linear-gradient(120deg,rgb(4, 2, 80),rgb(52, 52, 255));
+            color: white;
+            text-decoration: none;
+        }
+        .description{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 560px;
+            overflow: hidden;
+        }
+        .description > div:nth-child(1){
+            width: 750px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 10%;
+            text-align: justify;
+            animation: desc1 1.5s ease-in-out;
+            overflow: hidden;
+        }
+        .description > div:nth-child(1) h4{
+            font-size: 5rem;
+             color: rgb(255, 250, 248);
+        }
+        .description > div:nth-child(1) h3{
+            font-size: 3rem;
+             color: rgb(127, 196, 0);
+        }
+        .description > div:nth-child(1) p{
+            font-size: 1.8rem;
+            color: gray;
+        }
+        .description > div:nth-child(2){
+            border-radius: 10%;   
+            margin-top: 5%;
+            width: 400px;
+            height: 400px;
+            background: #000000;
+            position: relative;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            overflow: hidden;
+            border-radius: 20px;
+            animation: desc2 1.5s ease-in-out;
+            overflow: hidden;
+        }
+        @keyframes desc1{
+            0%{transform: translateX(-150%);}
+            100%{transform: translateX  (0%);}
+                 
+        }
+         @keyframes desc2{
+            0%{transform: translateX(150%);}
+            100%{transform: translateX  (0%);}
+        }
+       @keyframes rotBGimg {
+       from
+       {transform: rotate(0deg);}
+       to {
+       transform: rotate(360deg);
+       }
+       }
+       .description > div:nth-child(2){
+        position: relative;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 100px rgb(38, 1, 245),0px 0px 100px rgb(238, 255, 0);
+        /* animation: zoom 0.5s ease-in-out infinite alternate; */
+       }
+       @keyframes zoom{
+        from{
+              width: 420px;
+              height: 420px;
+        }
+        to{
+              width: 450px;
+              height: 450px;
+        }
+       }
+       .description > div:nth-child(2) > div:nth-child(1){
+       border: 50px solid rgb(33, 0, 151);
+            width: 200px;
+            height: 700px;
+            background:linear-gradient(rgb(255, 255, 255),rgb(233, 230, 224));
+            animation: rotBGimg 1s linear infinite;
+            transition: all 0.1s linear;
+            position: absolute;
+            box-shadow: 10px 10px 100px red,-10px -10px 100px red;
+       }
+       .description > div:nth-child(2) > div:nth-child(2){
+        width: 380px;
+        height: 380px;
+            background-image: url(./myphto4.jpg);
+       background-size: 100% 120%;
+       border-radius: 50%;
+       position: absolute;
+       z-index: 10;
+       /* border: 10px solid rgb(255, 102, 0); */
+       
+            
+       }
+        body > h2{
+            border-bottom: 5px dotted white;
+            width: 130px;
+            margin: 20px auto;
+            font-size: 3rem;
+            color: rgb(255, 81, 0);
+            background: black;
+        }
+        .about{
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            width: 100%;
+            height: 600px;
+        }
+        .about > div:nth-child(1){
+            width: 700px;
+            height: 100%;
+            position: relative;
+           
+        }
+        .container {
+            position: absolute;
+            top: 30%;
+            right: 50%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle {
+            position: absolute;
+            background: transparent;
+            width: calc(var(--i) * 4.5vmin);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: 5px solid rgb(201, 255, 7);
+            transform-style: preserve-3d;
+            transform: rotateX(70deg)
+            translateZ(80px);
+            animation: animate 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+         }
+         @keyframes animate {
+            0%, 100% {
+            transform: rotateX(70deg)
+            translateZ(50px) translateY(0);
+            }
+            50% {
+             transform: rotateX(70deg)
+            translateZ(100px) translateY(-500px);
+            }
+        }
+        .about > div:nth-child(2){
+            width: 500px;
+            height: 50%;
+        }
+        .about > div:nth-child(2) > div{
+            display: flex;
+            font-size: 5rem;
+            font-weight: bolder;color: rgb(255, 255, 255);
+        }
+        .about > div:nth-child(2) > p{
+            font-size: 1.5rem;
+            padding-top: 20px;
+            text-align: left;
+            color: rgb(189, 189, 189);
+        }
+         .about div:nth-child(2) > div > p{
+            animation: left 1.8s ease-out infinite;
+            opacity: 0;
+            transform: translateX(200px);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         }
+        .about div:nth-child(2) > div > p:nth-child(1){
+            color: rgb(255, 0, 0);
+            animation-delay: 0.1s;
+        }
+        .about div:nth-child(2) > div > p:nth-child(2){
+            color: #1100ff;
+           animation-delay: 0.2s;
+        }
+        .about div:nth-child(2) > div > p:nth-child(3){
+            color: #1100ff;
+            animation-delay: 0.3s;
+        }
+        .about div:nth-child(2) > div > p:nth-child(4){
+            color: #1100ff;
+            animation-delay: 0.4s;
+        }
+        .about div:nth-child(2) > div > p:nth-child(5){
+            color: #1100ff;
+            animation-delay: 0.5s;
+        }
+        .about div:nth-child(2) > div > p:nth-child(6){
+            color: #1100ff;
+            animation-delay: 0.6s;
+        }
+        @keyframes left{
+            100%{transform: translateX(0%);opacity: 1;}}
+        .skills{
+            width: 100%;
+            height: auto;
+        }
+       .skill1,.skill2 {
+           display: flex;
+           justify-content: space-evenly;
+           gap: 25px;
+           padding: 20px;
+        }
+
+        .card {
+           width: 300px;
+           height: 400px;
+           perspective: 1000px;
+           border-radius: 10px;
+           position: relative;
+        }
+
+        .inner {
+           width: 100%;
+           height: 400px;
+           position: relative;
+           transition: transform 1.5s;
+           transform-style: preserve-3d;
+       }
+
+        .card:hover .inner {
+           transform: rotateY(180deg);
+        }
+
+       .front, .back {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           border-radius: 12px;
+           backface-visibility: hidden;
+           display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+           flex-direction: column;
+        } 
+
+       .front {
+           color: black;
+           font-size: 1.5rem;
+           font-weight: bold;
+           text-align: center;
+           background: radial-gradient(rgb(252, 255, 252),rgb(3, 0, 206));
+        }
+
+       .back {
+           color: #000;
+           transform: rotateY(180deg);
+        }
+
+        .back img {
+           width: 100px;
+           height: 100px;
+           border-radius: 10px;
+        }
+        .back div{
+            width: 150px;
+            height: 50px;
+            border-radius: 20px;
+            background: rgb(63, 30, 63);
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            font-weight: bolder;
+            font-size: 1.3rem;
+        }
+        .projects{
+            width: 100%;
+            height: auto;
+        }
+        .project1{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 70px;
+        }
+        .project1 div:nth-child(1){
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-image:url(./b8.jpg);
+            background-size: 100% 100%;
+            transition: transform 1.5s;
+            transform-style: preserve-3d;
+        }
+        .project1 div:nth-child(1) div:hover{
+            transform: translateX(-300px);
+        }
+        .project1 div:nth-child(1) div{
+            width: 300px;
+            height: 300px;
+            color: black;
+            font-weight: bolder;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border-radius: 10px;
+            background-image:url(./b8.jpg);
+            background-size: 100% 100%;
+            background: linear-gradient( 200deg,rgb(255, 24, 24),rgb(233, 232, 232),rgb(116, 116, 116),rgb(255, 238, 0));
+        }
+        .project1 div:nth-child(2){
+            height: 250px;
+            color: gray;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+        .project1 h5{
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .project1 button{
+            width: 350px;
+            height: 40px;
+            background: linear-gradient(200deg,rgb(110, 0, 0),rgb(17, 0, 173));
+            color: rgb(17, 0, 255);
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 10px;
+        }
+        .project1 button:hover{
+            transform: scale(1.05,1.05);
+            transition: transform 0.5s;
+        }
+        .education{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .education > div > div div{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 20px solid rgb(197, 0, 0);
+            border-right: 20px solid black;
+            background: radial-gradient(rgb(250, 92, 0),rgba(5, 2, 5, 0.979));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            animation: rotate 1s ease-in-out infinite;
+
+        }
+        .education >div div{
+             width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: rgb(2, 1, 1);
+        }
+        @keyframes rotate{
+            100%{transform: rotateZ(360deg);}
+        }
+        .education h1{
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .contact{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact > div{
+            width: 70%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .contact > div div{
+            width:200px;
+            height: 200px;
+            background: radial-gradient(blue,black);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border: 5px solid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s;
+            
+        }
+        .contact > div div:hover{
+            transform: scale(1.08,1.08);
+            box-shadow: 5px -5px 10px #fbff00,
+            -5px 5px 10px #fbff00,
+            5px 5px 10px #fbff00,
+            -5px -5px 10px #fbff00;
+            
+        }
+        .contact > div div img{
+            width: 100px;
+            height: 100px;
+            border-radius: 20%;
+        }
+        @media (max-width: 600px) {
+
+        header > nav {
+        flex-direction: column;
+        height: auto;
+        gap: 50px;
+        padding: 15px;
+        text-align: center;
+    }
+
+        header > nav > div {
+        flex-wrap: wrap;
+        gap: 35px;
+        width: 100%;
+    }
+
+        header > nav button {
+        width: 150px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+        .description {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+        ;
+    }
+
+    .description > div:nth-child(1) {
+        width: 100%;
+        text-align: center;
+        padding-top: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .description > div:nth-child(1) h4 {
+        font-size: 2rem;
+    }
+
+    .description > div:nth-child(1) h3 {
+        font-size: 2.2rem;
+    }
+
+    .description > div:nth-child(1) p {
+        font-size: 1.2rem;
+    }
+
+    .description > div:nth-child(2) {
+        width: 250px;
+        height: 250px;
+        margin: auto;
+    }
+
+
+    .about {
+        flex-direction: column;
+        height: 700px;
+        gap: 0px;
+        padding: 20px;
+        overflow: hidden
+    }
+
+    .about > div:nth-child(1) {
+        width: 500px;
+        height: 500px;
+    }
+    .about > div:nth-child(2){
+        width: 500px;
+        height: 50px;
+    }
+    .about > div:nth-child(2) > div {
+        font-size: 3rem;
+        justify-content: center;
+    }
+    .about > div:nth-child(2) > p {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 10px;
+    }
+     .description > div:nth-child(2){
+        position: relative;
+        width: 260px;
+        height: 260px;
+       }
+       .description > div:nth-child(2) > div:nth-child(1){
+       border: 50px solid rgb(33, 0, 151);
+            width: 200px;
+            height: 700px;
+       }
+       .description > div:nth-child(2) > div:nth-child(2){
+        width: 240px;
+        height: 240px;
+            background-image: url(./myphto4.jpg);
+
+            
+       }
+
+    .skill1, .skill2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 50%;
+        height: 350px;
+    }
+    .inner { height: 350px; }
+
+    .project1 {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .project1 div:nth-child(1) {
+        width: 250px;
+        height: 250px;
+    }
+
+    .project1 div:nth-child(1) div {
+        width: 250px;
+        height: 250px;
+    }
+    .project1 div:nth-child(2) h5{
+        font-size: 1.8rem;
+    }
+    .project1 div:nth-child(2) p{
+        margin: 20px 0px;
+        font-size: 1rem;
+    }
+
+    .project1 button {
+        width: 350px;
+        height: 30px;
+    }
+
+    .education {
+        flex-direction: column;
+        height: auto;
+        gap: 40px;
+    }
+
+    .education > div > div div {
+        width: 180px;
+        height: 180px;
+        font-size: 1rem;
+        border-width: 12px;
+        margin: 0px auto ;
+    }
+    .education > div h1{
+       text-align: center;
+       margin-top: 0px;
+    }
+
+
+    .contact {
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact > div {
+        width: 100%;
+        flex-direction: column;
+        gap: 50px;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .contact > div div {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contact img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    header > nav {
+        padding: 10px;
+        flex-direction:column;
+        gap: 30px;
+        height: auto;
+    }
+    header > nav div{
+        gap:40px;  
+        flex-wrap: wrap;
+              
+    }
+    header > nav div h4{
+        background: rgb(0, 90, 35);
+        border-radius: 5px;
+    }
+    .description {
+        flex-direction: column;
+        gap: 50px;
+        height: auto;
+        padding-left: 40px;
+    }
+    
+     .description > div:nth-child(1) h4 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .description > div:nth-child(1) h3 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .description > div:nth-child(1) p {
+        font-size: 1.5rem;
+        text-align:center;
+    }
+    .description > div:nth-child(2) {
+        width: 350px;
+        height: 350px;
+        margin: auto;
+    }
+
+    .about {
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .skill1, .skill2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+     .description > div:nth-child(2){
+        width: 310px;
+        height: 310px;
+       }
+       .description > div:nth-child(2) > div:nth-child(1){
+       border: 50px solid rgb(33, 0, 151);
+            width: 200px;
+            height: 700px;
+       }
+
+       .description > div:nth-child(2) > div:nth-child(2){
+        width: 290px;
+        height: 290px;
+
+            
+       }
+
+    .card {
+        width: 260px;
+    }
+
+    .project1 {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .education {
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        gap: 20px;
+
+    }
+    .education > div > div div{
+        width: 150px;
+        height: 150px;
+        font-size: 1.5rem;
+    }
+    .education > div div{
+        width: 100px;
+        width: 100px;
+    }
+    .education h1{
+        margin-top: 0px;
+    }
+    .contact > div {
+        width: 50%;
+        flex-wrap: wrap;
+        gap: 50px;
+        height: auto;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+
+    .description > div:nth-child(1) h3 {
+        font-size: 3rem;
+    }
+
+    .skill1, .skill2 {
+        justify-content: space-around;
+        gap: 15px;
+    }
+
+    .card {
+        width: 280px;
+    }
+
+    .project1 p {
+        font-size: 1.3rem;
+    }
+}
